@@ -17,7 +17,7 @@ public class Stackoverflow001 {
     }
 
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sw2000");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("dummy");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         try {

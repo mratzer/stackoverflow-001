@@ -36,9 +36,9 @@ public class TableOneEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumns({
-            @JoinColumn(name = "SOME_STRING", referencedColumnName = "SOME_STRING"),
-            @JoinColumn(name = "SOME_INTEGER", referencedColumnName = "SOME_INTEGER"),
-            @JoinColumn(name = "SOME_INDEX", referencedColumnName = "SOME_INDEX")
+            @JoinColumn(name = "SOME_STRING", referencedColumnName = "SOME_STRING", insertable = false, updatable = false),
+            @JoinColumn(name = "SOME_INTEGER", referencedColumnName = "SOME_INTEGER", insertable = false, updatable = false),
+            @JoinColumn(name = "SOME_INDEX", referencedColumnName = "SOME_INDEX", insertable = false, updatable = false)
     })
     private TableTwoEntity tableTwoEntity;
 
@@ -81,9 +81,5 @@ public class TableOneEntity {
     public void setTableTwoEntity(TableTwoEntity tableTwoEntity) {
         this.tableTwoEntity = tableTwoEntity;
     }
-
-    // getters and setters
-
-
 
 }
